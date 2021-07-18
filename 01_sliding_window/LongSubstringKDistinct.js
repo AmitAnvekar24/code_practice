@@ -20,7 +20,6 @@ function LongSubstringKDistinct( str, K ) {
         }
 
         if( Object.keys(charFrequency).length > K ){
-            diff = index - startWindow;
             while( Object.keys(charFrequency).length > K ){   
                 let tempChar = str.charAt(startWindow);
                 if( charFrequency[tempChar] > 1 ){
@@ -29,10 +28,12 @@ function LongSubstringKDistinct( str, K ) {
                     delete charFrequency[tempChar];
                 }
                 startWindow++;
-            }
-            if( diff > ans ){
-                ans  = diff;
-            }
+            }   
+        }
+        
+        diff = index - startWindow + 1;
+        if( diff > ans ){
+            ans  = diff;
         }
         
     }
@@ -43,3 +44,4 @@ function LongSubstringKDistinct( str, K ) {
 console.log(LongSubstringKDistinct("araaci",2));
 console.log(LongSubstringKDistinct("araaci",1));
 console.log(LongSubstringKDistinct("cbbebi",3));
+console.log(LongSubstringKDistinct("abcac",2));

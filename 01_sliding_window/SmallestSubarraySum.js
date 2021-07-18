@@ -5,6 +5,7 @@
     Return 0, if no such subarray exists.
 */
 
+// Complexity O( N + N ) --> O (N) --> Optimal solution
 function SmallestSubarraySum( S, array) {
     
     let sum = 0, ans = Number.MAX_SAFE_INTEGER, diff = Number.MAX_SAFE_INTEGER, windowStart = 0;

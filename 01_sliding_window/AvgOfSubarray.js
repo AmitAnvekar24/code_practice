@@ -1,3 +1,7 @@
+/* 
+    Problem Statement #
+    Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
+*/
 
 // Complexity O(k*n) --> Suboptimal solution
 function AvgOfSubArray( k, arr ){
